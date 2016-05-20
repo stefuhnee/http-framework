@@ -6,6 +6,4 @@ const chaiHTTP = require('chai-http');
 chai.use(chaiHTTP);
 const request = chai.request;
 const fs = require('fs');
-let oldFiles = [];
-let newFiles = [];
-require('../server.js');
+require('../server');
