@@ -5,12 +5,39 @@ const expect = require('chai').expect;
 const chaiHTTP = require('chai-http');
 chai.use(chaiHTTP);
 const request = chai.request;
-const server = require('../lib/server');
+const http = require('http');
+//const router = require('../lib/handlers');
+const router = require('../lib/router');
 
-server.init();
+
+router.get('/', (req, res) => {
+  res.write('GET request to homepage received');
+  res.end();
+});
+
+router.post('/', (req, res) => {
+  res.write('POST request to homepage received');
+  res.end();
+});
+
+router.put('/', (req, res) => {
+  res.write('PUT request to homepage received');
+  res.end();
+});
+
+router.delete('/', (req, res) => {
+  res.write('DELETE request to homepage received');
+  res.end();
+});
+
+
+http.createServer(router.route())
+  .listen(3000, () => {
+    //console.log('Listening on Port 3000');
+  });
 
 describe('HTTP server', function () {
-///Make/inject a handlers file with get, post, destroy put
+  ///Make/inject a handlers file with get, post, destroy put
 
   it('respond to a GET request on default route /', function (done) {
     request('localhost:3000')
@@ -76,6 +103,5 @@ describe('HTTP server', function () {
         done();
       });
   });
-
 
 });
