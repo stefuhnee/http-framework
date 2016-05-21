@@ -2,11 +2,15 @@
 
 Route-me is a lightweight framework designed for quickly and easily setting up routes for a local server. Using route-me, you can define the behavior of your server by specifying a route using a RESTFUL method (currently only handles GET, POST, PUT, and DELETE), path, and callback function. Route-me will handle the rest!
 
+---
+
 #### Installation
 Open your favorite terminal and install the route-me framework via npm:
 ```sh
 $ npm i route-me
 ```
+
+---
 
 #### Basic Use
 Simply require route-me as a dependency, which will instantiate a new router to which you can add your own custom routes:
@@ -23,6 +27,8 @@ const router = require('route-me');
 router = module.exports;
 ```
 
+---
+
 #### Defining Routes
 Create methods on your router by specifying a RESTFUL method (.get, .post, .put, or .delete), URL path, and callback function. This is the general template:
 
@@ -38,6 +44,8 @@ router.get('/testPath', function(req, res) {
 router = module.exports;
 ```
 
+---
+
 #### Using the routes within a server
 Require in the routes file that you have created and pass a call to router.routes into your server.
 
@@ -49,6 +57,8 @@ const router = require('./routes'); //Wherever your routes are defined
 http.createServer(router.routes())
     .listen(3000);
 ```
+
+---
 
 ### Todos
 
