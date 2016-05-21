@@ -60,9 +60,8 @@ describe('HTTP server', function () {
     request('localhost:3000')
       .get('/dfs')
       .end(function (err, res) {
-        expect(err).to.eql(null);
         expect(res).to.have.status(404);
-        expect(res.text).to.eql('NOT FOUND');
+        expect(res.text).to.eql('Error: Not found');
         done();
       });
   });
@@ -72,9 +71,8 @@ describe('HTTP server', function () {
     request('localhost:3000')
       .patch('/')
       .end(function (err, res) {
-        expect(err).to.eql(null);
         expect(res).to.have.status(400);
-        expect(res.text).to.eql('BAD REQUEST');
+        expect(res.text).to.eql('Error: Bad Request');
         done();
       });
   });
