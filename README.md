@@ -33,7 +33,7 @@ router.get('/testPath', function(req, res) {
     res.end();
 });
 
-router = module.exports;
+module.exports = router;
 ```
 
 ### Todos
