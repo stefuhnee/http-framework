@@ -4,4 +4,4 @@ const server = require('./lib/server');
 const router = require('./lib/router');
 const handler = require('./lib/handlers');
 
-// server.init(router.routes, handler);
+server.init();
