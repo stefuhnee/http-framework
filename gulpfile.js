@@ -10,7 +10,7 @@ gulp.task('linter' , () => {
 
 gulp.task('tests', () => {
   return gulp.src(['./*.js', './test/*.js', './lib/*.js'], {read: false})
-    .pipe(mocha({reporter: 'spec'}));
+    .pipe(mocha({reporter: 'nyan'}));
 });
 
 gulp.task('watch', () => {
