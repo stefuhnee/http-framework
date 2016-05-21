@@ -47,14 +47,14 @@ router = module.exports;
 ---
 
 #### Using the routes within a server
-Require in the routes file that you have created and pass a call to router.routes into your server.
+Require in the routes file that you have created and pass a call to router.route into your server.
 
 __file: server.js__
 ```javascript
 const http = require('http');
 const router = require('./routes'); //Wherever your routes are defined
 
-http.createServer(router.routes())
+http.createServer(router.route())
     .listen(3000);
 ```
 
