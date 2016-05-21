@@ -1,6 +1,6 @@
 {
   "name": "route-me",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An Express-like router designed for quickly creating an HTTP server",
   "main": "main.js",
   "directories": {
