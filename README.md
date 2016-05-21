@@ -13,7 +13,7 @@ Simply require route-me as a dependency, which will instantiate a new router to 
 ```
 const router = require('route-me');
 ```
-Define your custom routes within a separate module.  You will need to export the router at the bottom of the file, after definining the routes.  Then, require this module into your server file.
+Define your custom routes within a separate module. For these examples, we are using the filename routes.js within the root directory of your application.  You will need to export the router at the bottom of the file, after definining the routes.  Then, require this module into your server file.
 
 __file: routes.js__
 ```
@@ -33,9 +33,19 @@ router.get('/testPath', function(req, res) {
     res.end();
 });
 
-module.exports = router;
+router = module.exports;
 ```
+#### Using the routes within a server
+Require in the routes file that you have created and pass a call to router.routes into your server.
 
+__file: server.js__
+```
+const http = require('http');
+const router = require('./routes'); //Wherever your routes are defined
+
+http.createServer(router.routes())
+    .listen(3000);
+```
 ### Todos
 
  - Handle other RESTFUL methods beyond GET, POST, PUT, DELETE
