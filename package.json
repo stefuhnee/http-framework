@@ -2,7 +2,7 @@
   "name": "route-me",
   "version": "1.0.1",
   "description": "An Express-like router designed for quickly creating RESTful routes for an HTTP server",
-  "main": "main.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
