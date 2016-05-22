@@ -1,5 +1,6 @@
 'use strict';
-const router = require('../lib/router');
+const Router = require('../lib/router');
+const router = new Router();
 
 router.get('/', (req, res) => {
   res.write('GET request to homepage received');

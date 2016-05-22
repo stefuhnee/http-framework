@@ -5,7 +5,7 @@ Route-me is a lightweight framework designed for quickly and easily setting up r
 ---
 
 ## Installation
-Open your favorite terminal and install the route-me framework via npm:
+Open your favorite shell terminal and install the route-me framework via npm:
 ```sh
 $ npm i route-me
 ```
@@ -13,13 +13,14 @@ $ npm i route-me
 ---
 
 ## Basic Use
-Simply require route-me as a dependency, which will instantiate a new router to which you can add your own custom routes.
+Simply require route-me as a dependency, and instantiate a new router to which you can add your own custom routes.
 
 Define your custom routes within a separate module. For these examples, we are using the filename routes.js within the root directory of the application.  You will need to export the router at the bottom of the file, after definining the routes.  Then, require this module into your server file.
 
 file: _routes.js_
 ```javascript
-const router = require('route-me');
+const Router = require('route-me');
+const router = new Router();
 // routes defined here
 router = module.exports;
 ```
@@ -32,6 +33,7 @@ Create methods on your router by specifying a RESTFUL method (.get, .post, .put,
 __file: routes.js__
 ```javascript
 const router = require('route-me');
+const router = new Router();
 
 router.get('/testPath', function(req, res) {
     res.write('Your message to the client here');
