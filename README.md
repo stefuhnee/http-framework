@@ -5,7 +5,7 @@ Route-me is a lightweight framework designed for quickly and easily setting up r
 ---
 
 ## Installation
-Open your favorite shell terminal and install the route-me framework via npm:
+Open your favorite terminal and install the route-me framework via npm:
 ```sh
 $ npm i route-me
 ```
