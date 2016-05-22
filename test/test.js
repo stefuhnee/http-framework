@@ -5,10 +5,8 @@ const expect = require('chai').expect;
 const chaiHTTP = require('chai-http');
 chai.use(chaiHTTP);
 const request = chai.request;
-const http = require('http');
-const router = require('../lib/router');
 require('../example/routes');
-require('../example/server')
+require('../example/server');
 
 describe('HTTP server', function () {
 
