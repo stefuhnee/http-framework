@@ -16,7 +16,7 @@ describe('HTTP server', function () {
       .end(function (err, res) {
         expect(err).to.eql(null);
         expect(res).to.have.status(200);
-        expect(res.text).to.eql('GET request to homepage received');
+        expect(res.text).to.eql('{"Message":"GET request to homepage received"}');
         done();
       });
   });
@@ -27,7 +27,7 @@ describe('HTTP server', function () {
       .end(function (err, res) {
         expect(err).to.eql(null);
         expect(res).to.have.status(200);
-        expect(res.text).to.eql('POST request to homepage received');
+        expect(res.text).to.eql('{"Message":"POST request to homepage received"}');
         done();
       });
   });
@@ -38,7 +38,7 @@ describe('HTTP server', function () {
       .end(function (err, res) {
         expect(err).to.eql(null);
         expect(res).to.have.status(200);
-        expect(res.text).to.eql('DELETE request to homepage received');
+        expect(res.text).to.eql('{"Message":"DELETE request to homepage received"}');
         done();
       });
   });
@@ -49,7 +49,7 @@ describe('HTTP server', function () {
       .end(function (err, res) {
         expect(err).to.eql(null);
         expect(res).to.have.status(200);
-        expect(res.text).to.eql('PUT request to homepage received');
+        expect(res.text).to.eql('{"Message":"PUT request to homepage received"}');
         done();
       });
   });
@@ -59,7 +59,7 @@ describe('HTTP server', function () {
       .get('/dfs')
       .end(function (err, res) {
         expect(res).to.have.status(404);
-        expect(res.text).to.eql('Error: Not found');
+        expect(res.text).to.eql('{"Error":"Not Found"}');
         done();
       });
   });
@@ -69,7 +69,7 @@ describe('HTTP server', function () {
       .copy('/')
       .end(function (err, res) {
         expect(res).to.have.status(400);
-        expect(res.text).to.eql('Error: Bad Request');
+        expect(res.text).to.eql('{"Error":"Bad Request"}');
         done();
       });
   });
