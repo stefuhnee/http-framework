@@ -4,11 +4,11 @@
   "description": "An Express-like router designed for quickly creating RESTful routes for an HTTP server",
   "main": "index.js",
   "directories": {
-    "test": "test"
+    "test": "mocha"
   },
   "scripts": {
     "test": "mocha",
-    "start": "index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
