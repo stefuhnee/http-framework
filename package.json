@@ -21,7 +21,7 @@
     "routes",
     "rest"
   ],
-  "author": "Stefanie Hansen",
+  "authors": ["Stefanie Hansen", "Dustin McBride"],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/stefuhnee/http-framework/issues"

@@ -1,6 +1,6 @@
 # __route-me__
 
-Route-me is a lightweight framework designed for quickly and easily setting up routes for a local server. Using route-me, you can define the behavior of your server by specifying a route using a RESTFUL method (currently only handles GET, POST, PUT, and DELETE), path, and callback function. Route-me will handle the rest!
+Route-me is a lightweight framework designed for quickly and easily setting up routes for a local server. Using route-me, you can define the behavior of your server by specifying a route using a RESTFUL method (currently only handles GET, POST, PUT, PATCH, and DELETE), path, and callback function. Route-me will handle the rest!
 
 ---
 
@@ -27,7 +27,7 @@ router = module.exports;
 ---
 
 ## Defining Routes
-Create methods on your router by specifying a RESTFUL method (.get, .post, .put, or .delete), URL path, and callback function. This is the general template:
+Create methods on your router by specifying a RESTFUL method (.get, .post, .put, .patch, or .delete), URL path, and callback function. This is the general template:
 
 __file: routes.js__
 ```javascript
@@ -59,7 +59,7 @@ http.createServer(router.route())
 
 ## Todos
 
- - Handle other RESTFUL methods beyond GET, POST, PUT, DELETE
+ - Handle other RESTFUL methods beyond GET, POST, PUT, PATCH, and DELETE
  - Handle many types of data
  - Enable responses beyond writing to the client
 

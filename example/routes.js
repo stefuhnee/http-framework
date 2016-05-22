@@ -21,4 +21,9 @@ router.delete('/', (req, res) => {
   res.end();
 });
 
+router.patch('/', (req, res) => {
+  res.write('PATCH request to homepage received');
+  res.end();
+});
+
 module.exports = router;
