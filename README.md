@@ -22,7 +22,7 @@ file: _routes.js_
 const Router = require('route-me');
 const router = new Router();
 // routes defined here
-router = module.exports;
+module.exports = router;
 ```
 
 ---
@@ -32,7 +32,7 @@ Create methods on your router by specifying a RESTFUL method in lowercase (.get,
 
 __file: routes.js__
 ```javascript
-const router = require('route-me');
+const Router = require('route-me');
 const router = new Router();
 
 router.get('/testPath', function(req, res) {
@@ -40,7 +40,7 @@ router.get('/testPath', function(req, res) {
     res.end();
 });
 
-router = module.exports;
+module.exports = router;
 ```
 
 ---
