@@ -28,7 +28,7 @@ router = module.exports;
 ---
 
 ## Defining Routes
-Create methods on your router by specifying a RESTFUL method (.get, .post, .put, .patch, or .delete), URL path, and callback function. This is the general template:
+Create methods on your router by specifying a RESTFUL method in lowercase (.get, .post, .put, .patch, or .delete), a URL path (as a string), and callback function. This is the general template:
 
 __file: routes.js__
 ```javascript
