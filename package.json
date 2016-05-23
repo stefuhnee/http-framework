@@ -1,6 +1,6 @@
 {
   "name": "route-me",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An Express-like router designed for quickly creating RESTful routes for an HTTP server",
   "main": "index.js",
   "directories": {
@@ -21,7 +21,10 @@
     "routes",
     "rest"
   ],
-  "authors": ["Stefanie Hansen", "Dustin McBride"],
+  "authors": [
+    "Stefanie Hansen",
+    "Dustin McBride"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/stefuhnee/http-framework/issues"
