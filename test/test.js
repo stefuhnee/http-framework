@@ -54,6 +54,17 @@ describe('HTTP server', function () {
       });
   });
 
+  it('respond to a PATCH request on default route /', function (done) {
+    request('localhost:3000')
+      .patch('/')
+      .end(function (err, res) {
+        expect(err).to.eql(null);
+        expect(res).to.have.status(200);
+        expect(res.text).to.eql('{"Message":"PATCH request to homepage received"}');
+        done();
+      });
+  });
+
   it('respond with 404 to an invalid route', function (done) {
     request('localhost:3000')
       .get('/dfs')
