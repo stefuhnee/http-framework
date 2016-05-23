@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stefuhnee/http-framework.git"
+    "url": "git+https://github.com/stefuhnee/route-me.git"
   },
   "keywords": [
     "router",
@@ -27,9 +27,9 @@
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/stefuhnee/http-framework/issues"
+    "url": "https://github.com/stefuhnee/route-me/issues"
   },
-  "homepage": "https://github.com/stefuhnee/http-framework#readme",
+  "homepage": "https://github.com/stefuhnee/route-me#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-http": "^2.0.1",
