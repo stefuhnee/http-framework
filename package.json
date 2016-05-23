@@ -1,14 +1,14 @@
 {
   "name": "route-me",
-  "version": "1.0.1",
-  "description": "An Express-like router designed for quickly creating an HTTP server",
-  "main": "main.js",
+  "version": "1.0.3",
+  "description": "An Express-like router designed for quickly creating RESTful routes for an HTTP server",
+  "main": "index.js",
   "directories": {
-    "test": "test"
+    "test": "mocha"
   },
   "scripts": {
     "test": "mocha",
-    "start": "node main.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,10 @@
     "routes",
     "rest"
   ],
-  "author": "Stefanie Hansen",
+  "authors": [
+    "Stefanie Hansen",
+    "Dustin McBride"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/stefuhnee/http-framework/issues"
