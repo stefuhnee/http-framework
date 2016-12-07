@@ -15,7 +15,7 @@ $ npm i route-me
 ## Basic Use
 Simply require route-me as a dependency, and instantiate a new router to which you can add your own custom routes.
 
-Define your custom routes within a separate module. For these examples, we are using the filename routes.js within the root directory of the application.  You will need to export the router at the bottom of the file, after definining the routes.  Then, require this module into your server file.
+Define your custom routes within a separate module. For these examples, we are using the filename routes.js within the root directory of the application.  You will need to export the router at the bottom of the file, after defining the routes.  Then, require this module into your server file.
 
 file: _routes.js_
 ```javascript
